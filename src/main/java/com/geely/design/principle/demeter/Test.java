@@ -1,4 +1,4 @@
-package com.geely.design.principle.a;
+package com.geely.design.principle.demeter;
 
 /**
  * 迪米特原则（最少知道原则），思想：解耦
@@ -10,7 +10,14 @@ package com.geely.design.principle.a;
  * Created by Administrator on 2018/10/3.
  */
 public class Test {
+    /**
+     * 场景：慕课网大老板要查所有课程的数量
+     * @param args
+     */
     public static void main(String[] args) {
+        Boss boss = new Boss();
+        TeamLeader teamLeader = new TeamLeader();
+        boss.commandCheckNumber(teamLeader);
 
     }
 }

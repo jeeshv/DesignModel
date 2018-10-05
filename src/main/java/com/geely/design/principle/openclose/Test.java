@@ -12,7 +12,11 @@ public class Test {
     public static void main(String[] args) {
         ICourse IoCourse = new JavaDiscountCourse(96,"java",348d);
         JavaDiscountCourse javaCourse = (JavaDiscountCourse)IoCourse;
-        System.out.println("原价："+javaCourse.getOriginPrice());
-        System.out.println("课程ID:"+javaCourse.getId() + "  课程名称：" + javaCourse.getName() + "  课程价格："+javaCourse.getPrice());
+        //v1 违反里氏替换原则
+       /* System.out.println("课程ID:"+javaCourse.getId() + "  课程名称：" +
+                "原价："+javaCourse.getOriginPrice() + javaCourse.getName() + "  课程折后价格："+javaCourse.getPrice());*/
+       //v2
+        System.out.println("课程ID:"+javaCourse.getId() + "  课程名称：" +
+                "原价："+javaCourse.getPrice() + javaCourse.getName() + "  课程折后价格："+javaCourse.getDisountPrice());
     }
 }
