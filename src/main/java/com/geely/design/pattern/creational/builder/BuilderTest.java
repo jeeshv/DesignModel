@@ -10,8 +10,6 @@ public class BuilderTest {
         System.out.println(human);
         Human normalHuman = director.createHumanByDirecotr(new NormalManBuilder());
         System.out.println(normalHuman);
-
     }
-
 }
 
